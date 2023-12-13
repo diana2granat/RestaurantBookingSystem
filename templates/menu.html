@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Menu</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Our Menu{% endblock  %}
+{% block content %}
+<!-- Menu Section -->
+<section class="container mx-auto mt-8">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Our Menu</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Menu Item 1 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/delish-230215-everything-bagel-seasoning-004-ab-web-1677274187.jpg?crop=0.942xw:0.707xh;0.0577xw,0.190xh&resize=1200:*"  alt="Crispy Salmon Delight" class="mb-4 rounded-md w-full h-48 object-cover">
+
+            <h3 class="text-xl font-semibold mb-2">Crispy Salmon Delight</h3>
+            <p class="text-gray-700">Perfectly cooked crispy salmon served with a side of seasonal vegetables.</p>
+            <span class="text-gray-500 mt-2">$14.99</span>
+        </div>
+
+        <!-- Menu Item 2 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+            <img src="https://www.eatwell101.com/wp-content/uploads/2017/08/pasta-with-salmon-recipes.jpg"  alt="Salmon Pasta" class="mb-4 rounded-md w-full h-48 object-cover">
+
+            <h3 class="text-xl font-semibold mb-2">Salmon Pasta</h3>
+            <p class="text-gray-700">Al dente pasta with a creamy sauce and fresh salmon pieces.</p>
+            <span class="text-gray-500 mt-2">$12.99</span>
+        </div>
+        <!-- Menu Item 3 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+            <img src="https://www.eatingwell.com/thmb/05eOUcVqHmh6XOmhDjwzaNjHAWM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Roasted-Salmon-Tacos-with-Corn-Pepper-Salsa-3b6ff7aabd464669bf6200bbad2a4485.jpg" alt="Roasted Salmon Tacos" class="mb-4 rounded-md w-full h-48 object-cover">
+
+            <h3 class="text-xl font-semibold mb-2">Roasted Salmon Tacos</h3>
+            <p class="text-gray-700">Roasted Salmon Tacos with Corn and Pepper Salsa.</p>
+            <span class="text-gray-500 mt-2">$11.99</span>
+        </div>
+        <!-- Add more menu items as needed -->
+    </div>
+</section>
+{% endblock  %}

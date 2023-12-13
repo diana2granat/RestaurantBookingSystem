@@ -7,9 +7,9 @@ from booking.views.table_view import tables
 
 
 urlpatterns = [
-    path("", home),
-    path("menu/", menu),
-    path("book/", book),
-    path("tables/", tables)
+    path("", home, name="home"),
+    path("menu/", menu, name="menu"),
+    path("book/", book, name="book"),
+    path("tables/", tables, name="tables")
 
 ]
