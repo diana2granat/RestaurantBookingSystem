@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 class Table(models.Model):
@@ -10,10 +11,11 @@ class Table(models.Model):
         return f"Table {self.tableid} (Capacity: {self.capacity})"
     
 class Booking(models.Model):
+    user=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True,blank=True) #if you delete the table, the booking will be deleted
     date=models.DateField()
     time=models.TimeField()
     guests=models.IntegerField()
-    table=models.ForeignKey(Table,on_delete=models.CASCADE)
+    table=models.ManyToManyField(Table,related_name="booking")
 
     def __str__(self):
         return f"Booking for {self.guests} on {self.date} at {self.time}"
