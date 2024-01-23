@@ -15,6 +15,7 @@ class Booking(models.Model):
     date=models.DateField()
     time=models.TimeField()
     guests=models.IntegerField()
+    phone = models.IntegerField(blank=True, null=True)
     table=models.ManyToManyField(Table,related_name="booking")
 
     def __str__(self):
@@ -28,3 +29,4 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.name
+

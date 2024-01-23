@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.contrib.admin.middleware.AdminLogMiddleware',
 ]
 
 ROOT_URLCONF = 'restaurantbooking.urls'
@@ -77,9 +78,9 @@ WSGI_APPLICATION = 'restaurantbooking.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'RestaurantsBooking',
+        'NAME': 'RestaurantsBooking_v2',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'Admin',
+        'USER': 'postgres',
         'PASSWORD': 'N3v3r74nd@',
      }
 }

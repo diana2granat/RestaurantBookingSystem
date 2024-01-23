@@ -1,9 +1,10 @@
 from django.contrib import admin
 from .models import User
-from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserCreationForm, UserChangeForm
+from django.contrib.admin.models import LogEntry
 
-class UserAdmin (UserAdmin):
+class UserAdmin (BaseUserAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
     model = User
@@ -24,3 +25,4 @@ class UserAdmin (UserAdmin):
     
 # Register your models here.
 admin.site.register (User, UserAdmin)
+admin.site.register(LogEntry)
