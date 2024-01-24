@@ -12,6 +12,5 @@ urlpatterns = [
     path("menu/", menu, name="menu"),
     path("book/", book, name="book"),
     path("tables/", list_tables, name="tables"),
-    path("login/", auth_views.LoginView.as_view(template_name="login.html"),name="login") #using the view of the Dajngo
-
+    path("login/", auth_views.LoginView.as_view(template_name="login.html"),name="login")#using the view of the Dajngo,
 ]
